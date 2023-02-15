@@ -10,6 +10,9 @@ class Program
     {
         Console.OutputEncoding = Encoding.UTF8;
         Console.InputEncoding = Encoding.Unicode;
+
+
+
         while (_game.GetWinner() == Winner.None)
         {
             PrintGame();
@@ -29,6 +32,7 @@ class Program
     static void PrintGame()
     {
         Clear();
+        Console.WriteLine("Игра Виселица");
         WriteLine($"Слово из {_game.Word.Length} букв, осталось ходов: {_game.Counter}");
         WriteLine(_game.Answer);
         string output = "";
